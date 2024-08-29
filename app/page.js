@@ -33,10 +33,14 @@ export default function Home() {
     setDarkMode(!darkMode);
   };
 
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Navbar/Header */}
-      <header className="w-full flex justify-between items-center p-4">
+      <header className="w-full flex flex-col md:flex-row justify-between items-center p-4 space-y-4 md:space-y-0">
         {/* Logo */}
         <div className="flex items-center">
           <img
@@ -64,12 +68,12 @@ export default function Home() {
               src="/profile.png"
               alt="Profile"
               className="w-10 h-10 rounded-full cursor-pointer"
-              onMouseOver={toggleDropdown}
+              onClick={toggleDropdown}
             />
 
             {/* Dropdown Menu */}
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-[#6c7932] text-white rounded-md shadow-lg z-50">
+              <div className="absolute right-0 mt-2 w-48 bg-[#6c7932] text-white rounded-md shadow-lg z-50" onMouseLeave={closeDropdown}>
                 <button className="block w-full text-left px-4 py-2 hover:bg-zinc-900 hover:rounded-md">Log in / Log out</button>
                 <button className="block w-full text-left px-4 py-2 hover:bg-zinc-900 hover:rounded-md">Upgrade to Pro</button>
                 <button className="block w-full text-left px-4 py-2 hover:bg-zinc-900 hover:rounded-md">Bookmarks</button>
