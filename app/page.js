@@ -22,8 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     const today = new Date();
-    setCurrentDate(today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));
-  }, []);
+    setCurrentDate(today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).replace(/^(\w+)/, '$1,'));  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -46,7 +45,7 @@ export default function Home() {
           <img
             src={darkMode ? "/logo-w.png" : "/logo.png"}
             alt="Logo"
-            className="w-28 h-auto"
+            className="w-40 h-auto"
           /> {/* Adjust size as needed */}
         </div>
 
