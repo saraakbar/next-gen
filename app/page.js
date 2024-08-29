@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     const today = new Date();
-    setCurrentDate(today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).replace(/^(\w+)/, '$1,'));  }, []);
+    setCurrentDate(today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
