@@ -22,7 +22,13 @@ export default function Home() {
 
   useEffect(() => {
     const today = new Date();
-    setCurrentDate(today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));  }, []);
+    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+
+    // Manually constructing the date string
+    const formattedDate = `${today.toLocaleDateString('en-GB', { weekday: 'long' })}, ${today.getDate()} ${today.toLocaleDateString('en-GB', { month: 'long' })} ${today.getFullYear()}`;
+
+    setCurrentDate(formattedDate);
+  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -99,7 +105,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Content Section */}
+      {/* First Section: Content */}
       <section className="flex flex-col items-center justify-center w-full mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl px-4">
           {/* Sport of the Day */}
@@ -133,6 +139,67 @@ export default function Home() {
             </div>
             <p className="text-lg font-semibold">athlete of the day</p>
           </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+
+
+      <section className="flex flex-col items-center justify-center h-full w-full mt-24">
+        <h2 className="text-xl font-semibold mb-8">Advertisements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-5xl px-4">
+          {/* Fan-created work */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-64 mb-2"></div>
+            <p className="text-lg font-semibold mt-2">fan-created work</p>
+          </div>
+
+          {/* new sports around us */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-32 mb-2"></div>
+            <div className="text-lg font-semibold">new sports around us</div>
+            <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-32 mt-2"></div>
+          </div>
+
+          {/* sports products */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <div className="text-lg font-semibold">sports products</div>
+            <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-32 m-2"></div>
+            <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-32 m-2"></div>
+          </div>
+
+          {/* Games & Equipment */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-40 m-2"></div>
+            <div className="text-lg font-semibold">games & equipment</div>
+            <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-24 m-2"></div>
+          </div>
+
+
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <section className="flex flex-col items-center justify-center w-full mt-8 mb-20">
+        <p className="text-center font-semibold text-lg">next gen sports</p>
+        <div className="flex space-x-4 mt-2">
+        <a href="#" className="text-gray-500 dark:text-gray-400">
+          <p className="underline">Promote your work/sport</p>
+        </a>
+        <a href="#" className="text-gray-500 dark:text-gray-400">
+          <p className="underline">Promote on nextgen IG</p>
+        </a>
+        </div>
+        <div className="flex space-x-4 mt-2">
+          <a href="#" className="text-gray-500 dark:text-gray-400">
+            <img src="/tiktok.png" className="w-6 h-6 object-scale-down" />{/* TikTok Icon */}
+          </a>
+          <a href="#" className="text-gray-500 dark:text-gray-400">
+            <img src="/insta.png" className="w-6 h-6 object-scale-down" /> {/* Instagram Icon */}
+          </a>
+          <a href="#" className="text-gray-500 dark:text-gray-400">
+            <img src="/youtube.png" className="w-6 h-6 object-scale-down" />{/* YouTube Icon */}
+          </a>
         </div>
       </section>
     </div>
