@@ -180,28 +180,29 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <section className="flex flex-col items-center justify-center w-full mt-8 mb-20">
-        <p className="text-center font-semibold text-lg">next gen sports</p>
-        <div className="flex space-x-4 mt-2">
-        <a href="#" className="text-gray-500 dark:text-gray-400">
-          <p className="underline">Promote your work/sport</p>
-        </a>
-        <a href="#" className="text-gray-500 dark:text-gray-400">
-          <p className="underline">Promote on nextgen IG</p>
-        </a>
-        </div>
-        <div className="flex space-x-4 mt-2">
-          <a href="#" className="text-gray-500 dark:text-gray-400">
-            <img src="/tiktok.png" className="w-6 h-6 object-scale-down" />{/* TikTok Icon */}
-          </a>
-          <a href="#" className="text-gray-500 dark:text-gray-400">
-            <img src="/insta.png" className="w-6 h-6 object-scale-down" /> {/* Instagram Icon */}
-          </a>
-          <a href="#" className="text-gray-500 dark:text-gray-400">
-            <img src="/youtube.png" className="w-6 h-6 object-scale-down" />{/* YouTube Icon */}
-          </a>
-        </div>
-      </section>
+      <section className="flex flex-col items-center justify-center w-full mt-8 mb-20 px-4">
+  <p className="text-center font-semibold text-lg">next gen sports</p>
+  <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-2">
+    <a href="#" className="text-gray-500 dark:text-gray-400">
+      <p className="underline text-center md:text-left">Promote your work/sport</p>
+    </a>
+    <a href="#" className="text-gray-500 dark:text-gray-400">
+      <p className="underline text-center md:text-left">Promote on nextgen IG</p>
+    </a>
+  </div>
+  <div className="flex flex-wrap justify-center space-x-4 mt-2">
+    <a href="#" className="text-gray-500 dark:text-gray-400">
+      <img src="/tiktok.png" className="w-6 h-6 object-scale-down" /> {/* TikTok Icon */}
+    </a>
+    <a href="#" className="text-gray-500 dark:text-gray-400">
+      <img src="/insta.png" className="w-6 h-6 object-scale-down" /> {/* Instagram Icon */}
+    </a>
+    <a href="#" className="text-gray-500 dark:text-gray-400">
+      <img src="/youtube.png" className="w-6 h-6 object-scale-down" /> {/* YouTube Icon */}
+    </a>
+  </div>
+</section>
+
     </div>
   );
 }
