@@ -28,7 +28,7 @@ export default function Home() {
           alt="dark-mode-image"
         />
         <img
-          className="w-40 h-auto mb-4 block dark:hidden"
+          className="w-40 h-auto block dark:hidden"
           src="/logo.png"
           alt="light-mode-image"
         />
