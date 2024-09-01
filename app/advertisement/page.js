@@ -12,9 +12,9 @@ export default function Advertisement() {
       <TopNavbar/>
     <div className="flex-grow flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Advertisement Section */}
-      <section className="flex flex-col items-center justify-center mt-8  w-full">
+      <section className="flex flex-col items-center justify-center w-full">
         <div className="flex flex-row  justify-between w-full">
-        <h2 className="text-xl font-semibold mb-8 ml-20">Advertisements</h2>
+        <h2 className="text-xl font-semibold mb-8 mt-8 ml-20">Advertisements</h2>
         <div className="mr-20">
         <ProfileDropdown darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
