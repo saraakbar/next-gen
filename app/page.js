@@ -16,17 +16,22 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex">
-      <TopNavbar/>
-      <div className="flex-grow flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 mt-4">
+      <TopNavbar />
+      <div className="flex-grow flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         {/* Navbar/Header */}
-        <header className="w-full flex flex-col md:flex-row justify-between items-center p-4 space-y-4 md:space-y-0">
+        <header className="w-full flex flex-col md:flex-row justify-between items-center p-7 space-y-4 md:space-y-0">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src={darkMode ? "/logo-w.png" : "/logo.png"}
-              alt="Logo"
-              className="w-40 h-auto"
-            />
+          <img
+          className="w-40 h-auto hidden dark:block"
+          src="/logo-w.png"
+          alt="dark-mode-image"
+        />
+        <img
+          className="w-40 h-auto mb-4 block dark:hidden"
+          src="/logo.png"
+          alt="light-mode-image"
+        />
           </div>
 
           {/* Centered Date and Time Machine Button */}
@@ -55,7 +60,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center text-center">
               <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-52 h-48 mb-2">
                 <img src="https://adrhnpvddyoawfkkodnz.supabase.co/storage/v1/object/public/images/diskgolf.png"
-                 alt="Sport of the Day" className="w-52 h-40 object-cover rounded-md" /> {/* Image for Sport of the Day */}
+                  alt="Sport of the Day" className="w-52 h-40 object-cover rounded-md" /> {/* Image for Sport of the Day */}
               </div>
               <p className="text-lg font-semibold">sport of the day</p>
             </div>

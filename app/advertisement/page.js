@@ -9,17 +9,17 @@ export default function Advertisement() {
 
   return (
     <div className="min-h-screen flex">
-      <TopNavbar/>
-    <div className="flex-grow flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      {/* Advertisement Section */}
-      <section className="flex flex-col items-center justify-center w-full">
-        <div className="flex flex-row  justify-between w-full">
-        <h2 className="text-xl font-semibold mb-8 mt-8 ml-20">Advertisements</h2>
-        <div className="mr-20">
-        <ProfileDropdown darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-6xl px-4">
+      <TopNavbar />
+      <div className="flex-grow flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        {/* Advertisement Section */}
+        <section className="flex flex-col items-center justify-center w-full">
+          <div className="flex flex-row mt-10 justify-between w-full">
+            <h2 className="text-xl font-semibold mb-8 ml-20">Advertisements</h2>
+            <div className="mr-20">
+              <ProfileDropdown darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-6xl px-4">
             {/* Fan-created work */}
             <div className="flex flex-col items-center justify-center text-center">
               <div className="bg-gray-200 dark:bg-gray-700 p-4 rounded-lg w-full h-64 mb-2"></div>
@@ -62,7 +62,16 @@ export default function Advertisement() {
           </div>
           <div className="flex flex-wrap justify-center space-x-4 mt-2">
             <a href="#" className="text-zinc-900 dark:text-gray-400">
-              <img src={darkMode ? "/tiktok-w.png" : "/tiktok.png"} className="w-6 h-6 rounded-md" alt="TikTok Icon" /> {/* TikTok Icon */}
+              <img
+                className="w-6 h-6 rounded-md hidden dark:block"
+                src="/tiktok-w.png"
+                alt="dark-mode-image"
+              />
+              <img
+                className="w-6 h-6 rounded-md block dark:hidden"
+                src="/tiktok.png"
+                alt="light-mode-image"
+              />
             </a>
             <a href="#" className="text-zinc-900 dark:text-gray-400">
               <img src="/insta.png" className="w-6 h-6" alt="Instagram Icon" /> {/* Instagram Icon */}
